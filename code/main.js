@@ -34,7 +34,7 @@ app.set("view engine", "ejs")
 
 // 세션
 app.use(session({
-  secret: process.env.SECRET_KEY,
+  secret: process.env.SECRET_KEY || "dev-secret", // 기본값 추가
   resave: false,
   saveUninitialized: true
 }));
